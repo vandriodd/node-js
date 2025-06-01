@@ -1,4 +1,4 @@
-const fs = require("node:fs");
+const fs = require('node:fs')
 
 // Synchronous
 // If we don't need to do other things while reading the file, we can use the synchronous version, otherwise, it blocks the thread
@@ -20,14 +20,24 @@ const fs = require("node:fs");
 // As it's asynchronous, we need to know when the file is read
 // We can use callbacks -> functions that are called when one task has finished
 
-console.log("Reading first file...");
-fs.readFile("./file.txt", "utf-8", (err, text) => {
-  console.log(text); // <--- Executes this function when the file is readed
-});
+console.log('Reading first file...')
+fs.readFile('./file.txt', 'utf-8', (err, text) => {
+  if (err) {
+    console.error('Error reading file', err)
+    return
+  }
 
-console.log("Do something else...");
+  console.log(text) // <--- Executes this function when the file is readed
+})
 
-console.log("Reading second file...");
-fs.readFile("./file2.txt", "utf-8", (err, text) => {
-  console.log(text);
-});
+console.log('Do something else...')
+
+console.log('Reading second file...')
+fs.readFile('./file2.txt', 'utf-8', (err, text) => {
+  if (err) {
+    console.error('Error reading file', err)
+    return
+  }
+
+  console.log(text)
+})

@@ -1,5 +1,5 @@
 // Sequential Asynchronous
-const fs = require("node:fs/promises");
+const fs = require('node:fs/promises');
 // import { readFile } from "node:fs/promises";
 
 // This way doesn't work with CommonJS
@@ -22,16 +22,16 @@ const fs = require("node:fs/promises");
 
 // IIFE -> Immediatly Invoked Function Expression
 (async () => {
-  console.log("Reading the first file...");
-  const text = await fs.readFile("./file.txt", "utf-8");
-  console.log("First text:", text);
+  console.log('Reading the first file...')
+  const text = await fs.readFile('./file.txt', 'utf-8')
+  console.log('First text:', text)
 
-  console.log("Do something else...");
+  console.log('Do something else...')
 
-  console.log("Reading the second file...");
-  const secondText = await fs.readFile("./file2.txt", "utf-8");
-  console.log("Second text:", secondText);
-})();
+  console.log('Reading the second file...')
+  const secondText = await fs.readFile('./file2.txt', 'utf-8')
+  console.log('Second text:', secondText)
+})()
 
 // The code above is the same as this
 

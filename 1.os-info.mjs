@@ -7,16 +7,16 @@ import {
   cpus,
   freemem,
   totalmem,
-  uptime,
-} from "node:os";
+  uptime
+} from 'node:os'
 
-console.log("Info about the Operation System:");
-console.log("-----------------------------");
+console.log('Info about the Operation System:')
+console.log('-----------------------------')
 
-console.log("Name of the OS:", platform());
-console.log("Version of the OS:", release());
-console.log("Architecture of the OS:", arch());
-console.log("CPUs:", cpus()); // <-- We can do some cool stuff with this information
-console.log("Free memory:", freemem() / 1024 / 1024);
-console.log("Total memory:", totalmem() / 1024 / 1024); // <-- 1st one converts bytes to KB, and the second one KB to MB
-console.log("Uptime:", uptime() / 60 / 60);
+console.log('Name of the OS:', platform())
+console.log('Version of the OS:', release())
+console.log('Architecture of the OS:', arch())
+console.log('CPUs:', cpus()) // <-- We can do some cool stuff with this information
+console.log('Free memory:', freemem() / 1024 / 1024)
+console.log('Total memory:', totalmem() / 1024 / 1024) // <-- 1st one converts bytes to KB, and the second one KB to MB
+console.log('Uptime:', uptime() / 60 / 60)
